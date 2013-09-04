@@ -796,7 +796,8 @@ module RightAws
       request_hash['AutoMinorVersionUpgrade'] = params[:auto_minor_version_upgrade] unless params[:auto_minor_version_upgrade].nil?
       request_hash['LicenseModel']            = params[:license_model]              unless params[:license_model].right_blank?
       request_hash['DBName']                  = params[:db_name]                    unless params[:db_name].right_blank?
-      request_hash['Engine']                  = params[:engine]                     unless params[:enginel].right_blank?
+      request_hash['Engine']                  = params[:engine]                     unless params[:engine].right_blank?
+      request_hash['PubliclyAccessible']      = params[:public]                     unless params[:public].right_blank?
       request_hash['DBSubnetGroupName']       = params[:db_subnet_group_name]       unless params[:db_subnet_group_name].right_blank?
       request_hash['Iops']                    = params[:iops]                       unless params[:iops].right_blank?
       request_hash['OptionGroupName']         = params[:option_group_name]          unless params[:option_group_name].right_blank?
