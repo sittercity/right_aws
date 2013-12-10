@@ -801,6 +801,9 @@ module RightAws
       request_hash['DBSubnetGroupName']       = params[:db_subnet_group_name]       unless params[:db_subnet_group_name].right_blank?
       request_hash['Iops']                    = params[:iops]                       unless params[:iops].right_blank?
       request_hash['OptionGroupName']         = params[:option_group_name]          unless params[:option_group_name].right_blank?
+      request_hash['DBSecurityGroups']         = params[:db_security_groups]          unless params[:db_security_groups].right_blank?
+      
+      
       link = generate_request('RestoreDBInstanceFromDBSnapshot', request_hash)
       request_info(link, DescribeDbInstancesParser.new(:logger => @logger))[:db_instances].first
     end
